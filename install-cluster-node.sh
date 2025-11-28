@@ -3,7 +3,7 @@
 # ComputePortal Cluster Node Installation and Network Join Script
 echo "Installing Cluster Node Interface..."
 sudo snap install tailscale
-sudo tailscale up --auth-key=c439d7048c3417e32e28d3d14cacdf0ff39c4548ddbe7bba  --login-server=https://headscale.computeportal.net:8080 --accept-routes
+sudo tailscale up --auth-key=bf41fe9e5170e5e672b969c4bc56ae314fdea8f60656c18c  --login-server=https://headscale.computeportal.net:8080 --accept-routes
 
 # Install SSH Server
 sudo apt install openssh-server
