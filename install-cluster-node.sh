@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt update && sudo apt upgrade -y
+
 # ComputePortal Cluster Node Installation and Network Join Script
 echo "Installing Cluster Node Interface..."
 sudo snap install tailscale
