@@ -7,16 +7,6 @@ echo "Installing Cluster Node Interface..."
 sudo snap install tailscale
 sudo tailscale up --auth-key=d2d63b15ee202cc9d7f12880d9d5d8a2662f50c52a848f04  --login-server=https://headscale.computeportal.net:8080 --accept-routes
 
-# Set tailscaled verbosity to 1 (snap hardcodes --verbose 10)
-sudo mkdir -p /etc/systemd/system/snap.tailscale.tailscaled.service.d
-cat <<'OVERRIDE' | sudo tee /etc/systemd/system/snap.tailscale.tailscaled.service.d/verbose.conf
-[Service]
-ExecStart=
-ExecStart=/snap/tailscale/154/bin/tailscaled --socket /var/snap/tailscale/common/socket/tailscaled.sock --statedir /var/snap/tailscale/common --verbose 1
-OVERRIDE
-sudo systemctl daemon-reload
-sudo systemctl restart snap.tailscale.tailscaled.service
-
 # Install SSH Server
 sudo apt install openssh-server
 
