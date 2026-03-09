@@ -72,7 +72,7 @@ fi
 # Step 5: Connect to ComputePortal network
 echo ""
 echo "[5/7] Connecting to ComputePortal network..."
-sudo tailscale up --auth-key=d2d63b15ee202cc9d7f12880d9d5d8a2662f50c52a848f04 --login-server=https://headscale.computeportal.net:8080 --accept-routes
+sudo tailscale up --auth-key=d2d63b15ee202cc9d7f12880d9d5d8a2662f50c52a848f04 --login-server=https://headscale.computeportal.net:8080 #--accept-routes
 
 # Check status
 echo ""
